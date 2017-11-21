@@ -29,7 +29,7 @@ function insertButtons() {
 		btn.appendChild(text); //Add text to button
 		btn.setAttribute("id", btnID); //Add ID to button
 		btn.setAttribute("class", "gradYearButton"); //Add class to button
-		btn.setAttribute("onClick", "newNumber(this.id)"); //Add JS listener to button
+		//btn.setAttribute("onClick", "newNumber(this.id)"); //Add JS listener to button
 		buttonDiv.appendChild(btn); //Add button to page
 		}
 	
@@ -47,3 +47,6 @@ function newNumber(clicked_id) {
 	result = 1 + result + rand; //Uses random string plus the grad year selected to make a number
 	resultDiv.innerHTML = result; //Puts number on page
 }
+
+document.getElementById('body').onload = insertButtons(); //Load buttons on page load
+document.getElementByClassName('gradYearButton').onclick = newNumber(this.id);
