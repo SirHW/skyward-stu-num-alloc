@@ -31,8 +31,11 @@ function insertButtons() {
 		btn.setAttribute("class", "gradYearButton"); //Add class to button
 		//btn.setAttribute("onClick", "newNumber(this.id)"); //Add JS listener to button
 		buttonDiv.appendChild(btn); //Add button to page
-		}
-	
+		//Remainder of the loop adds event listeners to each button to allow for the clicking to work
+		document.getElementById(btnID).addEventListener("click", function() {
+			newNumber(this.id);
+		}, false);
+	}
 }
 
 //Function to find a new student ID number
@@ -49,4 +52,3 @@ function newNumber(clicked_id) {
 }
 
 document.getElementById('body').onload = insertButtons(); //Load buttons on page load
-document.getElementByClassName('gradYearButton').onclick = newNumber(this.id);
