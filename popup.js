@@ -4,7 +4,7 @@ var month = date.getMonth() + 1; //Find current month (adds 1 because JS ranges 
 
 //If it is after June, we have no need for the current year as a grad year
 if (month < 6) {
-	month = month -1;
+	year = year -1;
 	}
 
 //Blank Array
